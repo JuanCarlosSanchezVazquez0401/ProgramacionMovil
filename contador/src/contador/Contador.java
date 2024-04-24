@@ -42,16 +42,33 @@ public Contador(){
     }
     
     public void run(){
-        while (true) {
+        while (contar) {
             try {
                 i = i + 1;
-                num.setText(i + "");
+                num.setText(i + " ");
                 Thread.sleep(1000);
             } catch (Exception e) {
                 System.out.println("no funciono");
-            }
+            }   
+        } 
+    }
+    
+    public void actionPerformed(ActionEvent ex){
+        if (ex.getSource().equals(btnIniciar)) {
+            
+            contar = true;
+            System.out.println("funcionando");
+            hilo.start();
+        }
+        if (ex.getSource().equals(btnDetener)) {
+            
+            contar = false;
+            System.out.println("Detenido");
             
         }
     }
+    
+    
+    
     
 }
