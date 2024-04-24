@@ -5,6 +5,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashSet;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,12 +31,27 @@ public Contador(){
     add(btnDetener);
     
 }
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         // TODO code application logic here
         Contador c = new Contador();
+        c.setVisible(true);
+        Thread hilo = new Thread(c);
+        hilo.start();
+        
+    }
+    
+    public void run(){
+        while (true) {
+            try {
+                i = i + 1;
+                num.setText(i + "");
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                System.out.println("no funciono");
+            }
+            
+        }
     }
     
 }
