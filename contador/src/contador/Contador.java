@@ -33,7 +33,7 @@ public Contador(){
 }
 
     public static void main(String[] args) {
-        // TODO code application logic here
+
         Contador c = new Contador();
         c.setVisible(true);
         Thread hilo = new Thread(c);
