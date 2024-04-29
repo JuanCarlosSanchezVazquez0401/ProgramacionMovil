@@ -1,7 +1,5 @@
 
 package Perro;
-//import peluqueria.Peluqueria;
-//import Pruebapeluqueria.Pruebapeluqueria;
 
 
 
